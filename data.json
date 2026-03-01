@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Alex",
+        "projects": [
+            {
+                "title": "CLI Tool",
+                "tasks": [
+                    {
+                        "title": "Implement add-task",
+                        "completed": true,
+                        "created_at": "2026-03-01T12:38:24.371262"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Alex",
+        "projects": [
+            {
+                "title": "CLI Tool",
+                "tasks": [
+                    {
+                        "title": "Implement add-task",
+                        "completed": false,
+                        "created_at": "2026-03-01T12:40:06.993087"
+                    }
+                ]
+            }
+        ]
+    }
+]
