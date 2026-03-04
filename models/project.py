@@ -1,27 +1,29 @@
+from models.task import Task
 
 
 class Project:
     def __init__(self, title):
         self.title = title
-        self.tasks = [] 
+        self.tasks = []
 
-
-    def add_task(self, task):
-        """Add a task to this project."""
+    def add_task(self, task_title):
+        task = Task(task_title)
         self.tasks.append(task)
 
+    def get_task(self, title):
+        for task in self.tasks:
+            if task.title == title:
+                return task
+        return None
+
     def to_dict(self):
-        """Convert Project to dictionary for JSON storage."""
         return {
             "title": self.title,
-            "tasks": [task.to_dict() for task in self.tasks]
+            "tasks": [task.to_dict() for task in self.tasks],
         }
 
-    @staticmethod
-    def from_dict(data):
-        """Load Project from dictionary."""
-        from models.task import Task
-        project = Project(data["title"])
-        for task_data in data.get("tasks", []):
-            project.tasks.append(Task.from_dict(task_data))
+    @classmethod
+    def from_dict(cls, data):
+        project = cls(data["title"])
+        project.tasks = [Task.from_dict(t) for t in data["tasks"]]
         return project

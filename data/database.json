@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Alex",
+        "projects": [
+            {
+                "title": "CLI Tool",
+                "tasks": [
+                    {
+                        "title": "Build CLI",
+                        "completed": false,
+                        "created_at": "2026-03-04T05:21:40.448869"
+                    },
+                    {
+                        "title": "Build CLI",
+                        "completed": false,
+                        "created_at": "2026-03-04T05:23:02.036203"
+                    }
+                ]
+            },
+            {
+                "title": "CLI Tool",
+                "tasks": []
+            }
+        ]
+    }
+]
